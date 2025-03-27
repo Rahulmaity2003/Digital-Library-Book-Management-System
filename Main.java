@@ -3,6 +3,9 @@ import service.BookService;
 import exception.BookNotFoundException;
 import java.util.Scanner;
 
+/**
+ * Main entry point of the application.
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
