@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * Represents a Book in the Library Management System.
+ */
 public class Book {
     private String bookId;
     private String title;
