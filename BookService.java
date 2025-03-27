@@ -5,6 +5,9 @@ import exception.BookNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Service class for managing books.
+ */
 public class BookService {
     private List<Book> books;
 
@@ -12,9 +15,8 @@ public class BookService {
         books = new ArrayList<>();
     }
 
-    // Add a new book
+    // Add a new book with validation
     public void addBook(Book book) {
-        // Check for duplicate Book ID
         for (Book b : books) {
             if (b.getBookId().equals(book.getBookId())) {
                 System.out.println("Book with ID " + book.getBookId() + " already exists.");
@@ -36,7 +38,7 @@ public class BookService {
         }
     }
 
-    // Search book by ID or title
+    // Search book by ID or Title
     public Book searchBook(String idOrTitle) throws BookNotFoundException {
         for (Book book : books) {
             if (book.getBookId().equalsIgnoreCase(idOrTitle) ||
